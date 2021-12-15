@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/migrations?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: password
+
+  flyway:
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    baseline-version: 0
+    enabled: true
+#    sql-migration-prefix: V
+#    repeatable-sql-migration-prefix: R
+#    sql-migration-separator: __
+    sql-migration-suffixes: .sql

@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTable
+      author: Soumitra Roy
+      changes:
+        - sqlFile:
+            dbms: mysql
+            encoding: utf8
+            endDelimiter: \n/\s*\n|\n/\s*$
+            path: scripts/V2__create_table_country.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: insertTableCountry
+      author: Soumitra Roy
+      changes:
+        - sqlFile:
+            dbms: mysql
+            encoding: utf8
+            path: scripts/V2__insert_table_country.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
